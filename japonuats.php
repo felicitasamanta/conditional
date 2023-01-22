@@ -1,8 +1,8 @@
-//paklausti, kodel neuzsideda spalva
 <?php
 $color = "";
 $year = $_GET['year'];
 $cycle = ((abs($year - 1984)) % 60 + 1) % 10;
+var_dump($cycle);
 switch (true) {
     case ($cycle == 0 || $cycle == 9):
         $color = 'black';
@@ -36,13 +36,12 @@ switch (true) {
 <body>
 <?php include "header.php" ?>
 <div class=" view d-flex flex-wrap justify-content-between align-items-center">
-    <form class=" col-md-5 mx-auto border border-primary p-3" action="trikampioats.php" method="get">
+    <form class=" col-md-5 mx-auto border border-primary p-3">
         <h1 class="text-center mb-3"> Japonų kalendorius</h1>
         <div class="mb-3">
             <label for="a" class="form-label">Jūsų pasirinktų metų spalva yra:</label>
-            <input type="number" name="a" class="form-control .<?= $color ?> " id="a" placeholder="<?= $year;
-            echo " was " . $color; ?>"
-                   onkeyup="enableSubmit()">
+            <input type="number" disabled name="a" class="form-control .<?= $color ?> " id="a" placeholder="<?= $year;
+            echo " was " . $color; ?>">
         </div>
         <div class="d-flex justify-content-center">
             <a class="btn btn-danger" href="japonukalendorius.php">Skaičiuoti kitų metų spalvą</a>

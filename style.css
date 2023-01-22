@@ -1,0 +1,19 @@
+.view {
+    height: 100vh;
+}
+.hide {
+    display: none;
+}
+.red {
+    background-color: red !important;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.black {
+    background-color: black;
+    color: white;
+}

@@ -2,21 +2,25 @@
 $color = "";
 $year = $_GET['year'];
 $cycle = ((abs($year - 1984)) % 60 + 1) % 10;
-var_dump($cycle);
 switch (true) {
-    case ($cycle == 0 || $cycle == 9):
+    case 0:
+    case 9:
         $color = 'black';
         break;
-    case ($cycle == 1 || $cycle == 2):
+    case 1:
+    case 2:
         $color = 'green';
         break;
-    case ($cycle == 3 || $cycle == 4):
+    case 3:
+    case 4:
         $color = 'red';
         break;
-    case ($cycle == 5 || $cycle == 6):
+    case 5:
+    case 6:
         $color = 'yellow';
         break;
-    case ($cycle == 7 || $cycle == 8):
+    case 7:
+    case 8:
         $color = 'white';
         break;
 }
